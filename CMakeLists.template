@@ -1,0 +1,75 @@
+# TODO: replace anything within angle brackets <>
+# DELETE THIS BUT COMPLY:
+# TODONT: use macros that impact all targets e.g.
+#  include_directories(), add_defintions(), link_libraries(),
+#  link_directories(), add_compile_options()
+# TODONT: TARGET_INCLUDE_DIRECTORIES() with things outside module/library path
+# TODONT: variables. Use targets and properties instead.
+# TODONT: file(GLOB)
+# TODONT: CMAKE_CXX_FLAGS
+# TODONT: Abuse requirements. e.g. -Wall is not a requirement.
+
+cmake_minimum_required(VERSION 3.5)
+
+# TODO: set project details
+project(<ProjectName>
+        VERSION <f.f>
+        DESCRIPTION "<description>"
+        LANGUAGES CXX)
+
+# TODO: External dependencies
+#  find_package(GTest)
+#  add_executable(some_test ...)
+# Then, w/ libs:
+#  target_include_directories(
+#    some_test PRIVATE
+#    ${GTEST_INCLUDE_DIRS}
+#  )
+# or with binaries:
+#  target_link_libraries(
+#    some_test PRIVATE
+#    ${GTEST_BOTH_LIBRARIES}
+#  )
+
+# DONT DO THIS
+# Add compile flags to targets
+if(MSVC)
+        add_compile_options(/W3 /WX)
+else()
+        add_compile_options(-W -Wall -Werror)
+endif()
+
+# TODO: Add libraries with
+#  add_library(mylib <STATIC|SHARED|MODULE> src/file1.cpp includes/mylib.h)
+#  target_include_directories(mylib
+#   PUBLIC
+#    /path/to/includes
+#   PRIVATE
+#    /path/to/src
+#  )
+# TODO: Add headeronly library with
+#  add_library(mylib INTERFACE)
+#  target_include_directories(mylib INTERFACE include)
+#  target_link_libraries(mylib INTERFACE Boost::Boost)
+# ALWAYS SPECIFY PUBLIC OR PRIVATE OR INTERFACE
+
+# TODO: Add options
+#  if (SOME_SETTING)
+#     target_compile_features(lib
+#      PUBLIC
+#       <SOMESETTING e.g.cxx_std_11>
+#      )
+#  endif()
+#  if a setting impacts implementation, make compile feature private instead
+# TODONT: set flags in target_compile_features that impact ABI
+
+# TODO: Add executables with
+#  add_executable(binary
+#    src/main.cpp)
+# Add direct dependencies with
+#  target_link_libraries(binary
+#   <PRIVATE|PUBLIC>
+#    slib
+#   )
+# Careful what dependencies you make public, people who include your project
+# will inherit public dependencies
