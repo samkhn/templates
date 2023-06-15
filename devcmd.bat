@@ -18,6 +18,10 @@ IF NOT DEFINED DevEnvDir (
 )
 SET "PATH=C:\Program Files\CMake\bin;%PATH%"
 
+REM Library paths to help CMake
+SET GTest_ROOT=C:\install
+SET benchmark_ROOT=C:\install
+
 SET "PATH=%PATH%;C:\go\bin"
 SET "PATH=%USERPROFILE%\.cargo\bin;%PATH%"
 
