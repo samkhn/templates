@@ -17,6 +17,8 @@ project(<ProjectName>
         DESCRIPTION "<description>"
         LANGUAGES CXX)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # TODO: External dependencies
 #  find_package(GTest)
 #  add_executable(some_test ...)
