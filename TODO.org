@@ -1,0 +1,13 @@
+* TODO full C++ CMake setup with unit tests, benchmarks, (python) integration test
+* TODO experiment C++ CMake setup (just main binary)
+* TODO benchmarking C++ CMake setup
+* TODO competitive programming C++ Makefile setup (target for passing in in, piping output, cmp diff)
+* TODO full C Makefile project
+* TODO experiment C Makefile project (e.g. for playing with Linux interfaces)
+* TODO Rust workspace cargo toml
+* TODO experiment Python setup
+* TODO full Python project (unit tests, large scale tests, benchmarks)
+* TODO Python data science/jupyter notebook
+* TODO Golang experiment (just a doc explaining how to quickly create module)
+* TODO Golang project 
+* TODO Erlang project setup???? (not sure what this entails so need to investigate)
