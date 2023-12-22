@@ -2,26 +2,21 @@
 
 rm $HOME/.csearchindex
 
-$HOME/go/bin/cindex \
-    /usr/include/ /usr/local/include/ \
-    /usr/src/kernels/`uname -r`/ \
-    /usr/local/go/ \
-    $HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/ \
-	$HOME/out/compilers-erlotp-2023-11-28/lib/erlang/lib/ \
-    /usr/lib64/python3.11 \
-    $HOME/arch \
-    $HOME/blog \
-    $HOME/compilers \
-    $HOME/crypt \
-    $HOME/games \
-    $HOME/go/src \
-    $HOME/kernels \
-    $HOME/lib \
-    $HOME/net \
-    $HOME/perf \
-    $HOME/render \
-    $HOME/system \
-    $HOME/templates \
-    $HOME/testing \
-    $HOME/tools \
-    $HOME/x
+cindex \
+	/usr/include/ \
+	/usr/local/include/ \
+	/usr/include/c++ \
+	$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library \
+	$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library \
+	/usr/local/go/src \
+	/usr/lib/erlang/lib \
+	/usr/lib/python3.10 \
+	$HOME/arch \
+	$HOME/blog \
+	$HOME/go/src \
+	$HOME/kernel \
+	$HOME/lib \
+	$HOME/render \
+	$HOME/templates \
+	$HOME/x
+
