@@ -7,7 +7,7 @@ fi
 
 pushd $(dirname $0)
 
-PROJECT_DIR="$(echo "$(pwd)" | sed -e 's/^\/home\/samiurkhan\///')"
+PROJECT_DIR="$(echo "$(pwd)" | sed -e 's/^\/home\/samiur\///')"
 SOURCE_DIR=$(pwd)
 BUILD_DIR=$HOME/build/$PROJECT_DIR/
 
